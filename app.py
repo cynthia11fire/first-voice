@@ -28,10 +28,21 @@ ENTRY_QUESTION = "工作上，什麼事情卡住、混亂或沒人知道怎麼�
 
 
 # ============================================================
-# 五大工作行為模式
+# 五種工作行為模式
 # 注意：這不是人格分類，也不是職涯測驗。
 # 這裡的分類只是用來理解「使用者在工作中反覆被依賴的功能」。
 # ============================================================
+
+
+## Author
+
+**Cynthia Tseng**  
+Master's student in Interaction Design  
+National Taipei University of Technology, Taiwan
+
+Kaggle: [@littlebeastai](https://www.kaggle.com/littlebeastai)
+
+First Voice was created for The Gemma 4 Good Hackathon as an exploration of human-centered, local-first AI interaction design.
 
 CATEGORIES = {
     "coordination": {
