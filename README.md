@@ -2,6 +2,9 @@
 
 ## Local-first narrative reframing with Gemma
 
+> 📺 **[Watch the demo video](https://youtu.be/qzKnlJOjB5s)**  
+> 🔗 **[GitHub Repository](https://github.com/cynthia11fire/first-voice)**
+
 First Voice is a **local-first narrative reframing prototype** built with **Gemma 4 through Ollama**.
 
 It helps experienced professionals, career changers, and non-technical users turn real work experience into language they can understand, reuse, and continue developing with AI.
@@ -18,6 +21,30 @@ Instead of starting with a blank prompt box, users answer a short guided workflo
 
 ---
 
+## Quick Start
+
+```bash
+# 1. Install Ollama
+# https://ollama.com
+
+# 2. Pull the model
+ollama pull gemma4:e4b
+
+# 3. Install dependencies
+pip install gradio requests
+
+# 4. Run
+python app.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:7861
+```
+
+---
+
 ## Why This Exists
 
 Many people do not lack experience.
@@ -26,10 +53,10 @@ They have years of observation, judgment, coordination, service, problem-solving
 
 But when they open an AI tool, they often do not know:
 
-- what they want to say
-- how to describe what they actually do
-- how to ask AI for help
-- how to judge whether the output still feels true to them
+* what they want to say
+* how to describe what they actually do
+* how to ask AI for help
+* how to judge whether the output still feels true to them
 
 They open ChatGPT.  
 They see a blank box.  
@@ -55,14 +82,6 @@ They may be the person others call when things are unclear, stuck, messy, or dif
 
 But because this work does not always fit neatly into a job title, it can be hard to describe.
 
-People may ask themselves:
-
-> "Does this count as a real skill?"  
-> "Does this sound too ordinary?"  
-> "Does this sound too AI-generated?"  
-> "Will anyone care about this?"  
-> "Do my past experiences still matter in the AI era?"
-
 First Voice helps users slow down, identify the actual pattern behind their work, and translate that pattern into language they can understand and reuse.
 
 ---
@@ -71,8 +90,8 @@ First Voice helps users slow down, identify the actual pattern behind their work
 
 First Voice is especially aligned with two parts of the Gemma 4 Good Hackathon:
 
-- **Ollama Award**: the prototype demonstrates Gemma 4 running locally through Ollama.
-- **Digital Equity and Inclusion**: the interface lowers the barrier for people who are not already fluent in prompting, AI tools, or professional self-presentation.
+* **Ollama Award**: the prototype demonstrates Gemma 4 running locally through Ollama.
+* **Digital Equity and Inclusion**: the interface lowers the barrier for people who are not already fluent in prompting, AI tools, or professional self-presentation.
 
 The project does not assume that users already know how to write a good prompt. It helps them build the context first.
 
@@ -82,12 +101,12 @@ The project does not assume that users already know how to write a good prompt. 
 
 First Voice is not:
 
-- a prompt library
-- a resume generator
-- a job recommendation tool
-- a LinkedIn post generator
-- a personal branding tool
-- a therapy chatbot
+* a prompt library
+* a resume generator
+* a job recommendation tool
+* a LinkedIn post generator
+* a personal branding tool
+* a therapy chatbot
 
 It can produce resume, interview, portfolio, social, and AI collaboration language, but only after the user first builds a grounded work context.
 
@@ -137,11 +156,11 @@ First Voice identifies the likely work behavior pattern behind the user's input.
 
 The current prototype includes five work pattern categories:
 
-- coordination
-- technical sensemaking
-- organization
-- mentoring
-- stabilization
+* coordination
+* technical
+* organization
+* mentoring
+* stabilization
 
 If the model call fails, the prototype includes a fallback keyword classifier to keep the demo usable.
 
@@ -153,11 +172,11 @@ Instead of asking Gemma to freely generate any question, First Voice uses curate
 
 This design choice helps prevent the system from drifting into:
 
-- therapy-like questions
-- vague motivational coaching
-- generic self-help language
-- overly philosophical prompts
-- career advice given too early in the process
+* therapy-like questions
+* vague motivational coaching
+* generic self-help language
+* overly philosophical prompts
+* career advice given too early in the process
 
 The purpose is not to analyze the user as a person.
 
@@ -188,16 +207,14 @@ After the core result, the user chooses one use case.
 
 Current options include:
 
-- resume
-- interview
-- portfolio
-- social post
-- AI collaboration method
-- shortcut command table
+* resume
+* interview
+* portfolio
+* social post
+* AI collaboration method
+* shortcut command table
 
 This layered design keeps the emotional peak of the core result separate from practical output generation.
-
-This progressive disclosure design minimizes cognitive load, allowing the emotional peak of self-recognition to settle before moving into practical execution.
 
 The goal is not only reflection.
 
@@ -237,12 +254,10 @@ It is about creating a safer environment where users can work with sensitive per
 
 The prototype demonstrates how Gemma can support a more careful AI interaction pattern:
 
-- not just answering
-- not just generating
-- not just summarizing
-- but helping users build context before AI collaboration begins
-
-This makes Gemma useful not only as a language model, but as part of a reflective interaction system.
+* not just answering
+* not just generating
+* not just summarizing
+* but helping users build context before AI collaboration begins
 
 ---
 
@@ -254,13 +269,13 @@ No personal story needs to be uploaded to a cloud API.
 
 This matters because users may write about:
 
-- self-doubt
-- career uncertainty
-- workplace relationships
-- professional shame
-- sensitive lived experience
-- transitions between industries
-- fear of being misunderstood by AI or by other people
+* self-doubt
+* career uncertainty
+* workplace relationships
+* professional shame
+* sensitive lived experience
+* transitions between industries
+* fear of being misunderstood by AI or by other people
 
 For this project, local-first is not only a technical feature.
 
@@ -274,16 +289,16 @@ A local-first workflow gives users more psychological safety to write messy, unf
 
 ## Technical Stack
 
-- **Model**: Gemma 4 E4B via Ollama
-- **Model tag used in code**: `gemma4:e4b`
-- **Framework**: Gradio
-- **Language**: Python 3.11+
-- **Runtime**: Local machine
-- **Ollama API**: called through `requests`
-- **Interface**: Localhost demo
-- **Default local URL**: `http://127.0.0.1:7861`
-- **Deployment**: 100% local prototype
-- **Cloud dependency**: None required for the demo workflow
+* **Model**: Gemma 4 E4B via Ollama
+* **Model tag used in code**: `gemma4:e4b`
+* **Framework**: Gradio
+* **Language**: Python 3.11+
+* **Runtime**: Local machine
+* **Ollama API**: called through `requests`
+* **Interface**: Localhost demo
+* **Default local URL**: `http://127.0.0.1:7861`
+* **Deployment**: 100% local prototype
+* **Cloud dependency**: None required for the demo workflow
 
 ---
 
@@ -292,8 +307,6 @@ A local-first workflow gives users more psychological safety to write messy, unf
 This project is designed to run locally using Python, Gradio, Ollama, and Gemma.
 
 The local Ollama runtime is not fully reproducible inside Kaggle Notebook, so the primary reproduction path is a local machine setup.
-
-The following steps are provided so reviewers can reproduce the demo locally.
 
 ---
 
@@ -319,7 +332,7 @@ python3 --version
 
 Install Ollama from the official Ollama website:
 
-[https://ollama.com/](https://ollama.com/)
+https://ollama.com/
 
 After installation, confirm that Ollama is available:
 
@@ -345,8 +358,6 @@ Confirm the model tag is available:
 ollama list
 ```
 
-The model name in the code must match the model tag available in the local Ollama environment.
-
 The prototype currently uses:
 
 ```python
@@ -358,7 +369,7 @@ OLLAMA_MODEL = "gemma4:e4b"
 ### 4. Clone or download this repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/cynthia11fire/first-voice.git
 cd first-voice
 ```
 
@@ -429,28 +440,12 @@ User input is processed through the local Ollama runtime and is not sent to a cl
 
 ## Expected Repository Structure
 
-Recommended final submission structure:
-
 ```text
 first-voice/
 ├── app.py
 ├── README.md
 ├── requirements.txt
-├── LICENSE
-├── media/
-│   ├── thumbnail.png
-│   └── screenshots/
-└── docs/
-    └── concept_note.md
-```
-
-Recommended minimum files:
-
-```text
-app.py
-README.md
-requirements.txt
-LICENSE
+└── LICENSE
 ```
 
 ---
@@ -463,8 +458,6 @@ A minimal `requirements.txt` should include:
 gradio
 requests
 ```
-
-If additional Python packages are used in the final version of the script, they should also be added to `requirements.txt`.
 
 ---
 
@@ -508,14 +501,6 @@ If the port is already in use, either close the other process or change the Grad
 
 ---
 
-### The model response is slow
-
-Local model speed depends on hardware.
-
-If the response is slow, wait for the first generation to complete. Performance may vary depending on GPU, RAM, and Ollama configuration.
-
----
-
 ## Safety and Trust
 
 First Voice is not a therapy chatbot.
@@ -530,8 +515,6 @@ It is a local-first reflective interaction prototype that helps people recognize
 
 The prototype includes lightweight reasoning cues, such as the detected work pattern and classification rationale, so users can see how the system moved from their original words toward the final reframing.
 
-This helps reduce the risk of the AI becoming a black box that defines the user too quickly.
-
 The user remains the final editor of meaning.
 
 ---
@@ -541,8 +524,6 @@ The user remains the final editor of meaning.
 ### 1. The system does not comfort the user. It reorganizes meaning.
 
 First Voice avoids toxic positivity, exaggerated encouragement, and generic motivational language.
-
-It does not tell the user that everything is wonderful.
 
 It helps the user see the structure behind what they already did.
 
@@ -610,7 +591,7 @@ This prototype is intended to be submitted as a local-first Gemma 4 + Ollama dem
 
 Reviewers can reproduce the app locally by installing Ollama, pulling `gemma4:e4b`, installing the Python dependencies, and running the Gradio app.
 
-The public web page or Kaggle writeup can show screenshots and a video demo, but the core AI workflow is designed to run locally.
+The public Kaggle writeup includes screenshots and a video demo, but the core AI workflow is designed to run locally.
 
 This preserves the project's privacy and design goals.
 
@@ -622,14 +603,12 @@ This is a prototype for the Kaggle Gemma 4 Good Hackathon.
 
 Current limitations include:
 
-- the reflective flow is still manually curated
-- output quality depends on the user's input
-- some responses still require human editing
-- the system has not yet been tested with a large user group
-- the local Ollama runtime is not fully reproducible inside Kaggle Notebook
-- the current prototype focuses on narrative reframing rather than full career planning
-
-These limitations are intentional for this stage.
+* the reflective flow is still manually curated
+* output quality depends on the user's input
+* some responses still require human editing
+* the system has not yet been tested with a large user group
+* the local Ollama runtime is not fully reproducible inside Kaggle Notebook
+* the current prototype focuses on narrative reframing rather than full career planning
 
 The goal is to test the interaction pattern, not to build a complete career platform.
 
@@ -639,27 +618,21 @@ The goal is to test the interaction pattern, not to build a complete career plat
 
 Future improvements may include:
 
-- user testing with experienced professionals and career changers
-- a larger curated question bank
-- multilingual support
-- better onboarding for low-confidence users
-- before / after comparison view
-- exportable narrative cards
-- clearer user editing controls
-- refined explainability UI
-- optional templates for portfolio, interview, or self-introduction use cases
+* user testing with experienced professionals and career changers
+* a larger curated question bank
+* multilingual support
+* better onboarding for low-confidence users
+* before / after comparison view
+* exportable narrative cards
+* clearer user editing controls
+* refined explainability UI
+* optional templates for portfolio, interview, or self-introduction use cases
 
 ---
 
 ## License
 
 This project is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
-
-You are free to share and adapt the project, including for commercial purposes, as long as appropriate credit is given.
-
-Author: Cynthia Tseng  
-Project: First Voice  
-Kaggle: [@littlebeastai](https://www.kaggle.com/littlebeastai)
 
 See the `LICENSE` file for details.
 
@@ -668,6 +641,7 @@ See the `LICENSE` file for details.
 ## Author
 
 **Cynthia Tseng**  
-Kaggle: [@littlebeastai](https://www.kaggle.com/littlebeastai)  
-Department of Interaction Design, National Taipei University of Technology  
-Taiwan
+Master's student in Interaction Design  
+National Taipei University of Technology, Taiwan  
+
+Kaggle: [@littlebeastai](https://www.kaggle.com/littlebeastai)
